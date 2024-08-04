@@ -4,7 +4,8 @@
 
 #include "Device.h"
 
-class Thermostat : public Device {
+class Thermostat : public Device
+{
 public:
     Thermostat(const std::string name, const std::string serialNumber, const std::string license, int dayDesiredTemp, int nightDesiredTemp, int currentTemp);
     ~Thermostat();
