@@ -7,7 +7,9 @@
 class TV : public Device
 {
     public:
-        TV(const std::string name, const std::string serialNumber, const std::string license, int desiredChannel, int desiredVolume);
+        // reading name, serialNumber, and license from file
+        // TV(const std::string name, const std::string serialNumber, const std::string license, int desiredChannel, int desiredVolume);
+        TV(int desiredChannel, int desiredVolume);
         ~TV();
 
         // i/o save channel and volume to file

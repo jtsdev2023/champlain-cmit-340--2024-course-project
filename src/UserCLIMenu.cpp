@@ -5,6 +5,10 @@
 #include <variant>
 #include <iostream>
 
+#include "ReadCSVFile.cpp"
+
+#include "stub/TV.h"
+
 /*
 
 - thinking about selections similar to:
@@ -36,6 +40,15 @@ void selection4();
 void selection5();
 void selection6();
 void quit();
+
+// need to decide where to put these functions
+// i think the menu will call the classes ?
+// then the classes will call these functions ?
+// void getTVChannel();
+// void getTVVolume();
+// void getSecurityCode();
+// void getThermostatTemp();
+// void writeToCSVFile();
 
 
 void menuRun()
@@ -119,25 +132,39 @@ void displayMenu()
 
 }
 
+
+// smart device functions
+// void getTVChannel()
+// {
+//     std::cout << std::endl;
+//     std::cout << "Enter TV Channel: ";
+//     int tvChannel;
+//     std::cin >> tvChannel;
+//     std::cout << "TV Channel: " << tvChannel << std::endl;
+// }
+
+
 // selection 1 power on
 void selection1()
 {
     std::cout << std::endl;
-    std::cout << "Selection 1: Power on and register smart devices" << std::endl;
+    std::cout << "Selection 1: Power on and register smart devices";
+    std::cout << std::endl << std::endl;
+    readCSVFile();
 }
 
-// selection 2 thermostat
+// selection 2 TV
 void selection2()
 {
     std::cout << std::endl;
-    std::cout << "Selection 2: Thermostat" << std::endl;
+    std::cout << "Selection 2: TV" << std::endl;
 }
 
-// selection 3 TV
+// selection 3 thermostat
 void selection3()
 {
     std::cout << std::endl;
-    std::cout << "Selection 3: TV" << std::endl;
+    std::cout << "Selection 3: Thermostat" << std::endl;
 }
 
 // selection 4 lighting
