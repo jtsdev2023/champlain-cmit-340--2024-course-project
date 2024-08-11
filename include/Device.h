@@ -7,6 +7,7 @@
 #include <chrono>
 #include <iostream>
 
+
 class Device {
 public:
     // Device(const std::string name, const std::string serialNumber, const std::string license);
@@ -15,7 +16,7 @@ public:
 
     virtual void turnOn();
     virtual void turnOff();
-    virtual void displayDeviceInfo() const;
+    // virtual void displayDeviceInfo() const;
     auto getCurrentTime();
     // can Device call getCurrentTime()? and make the return value public variable?
 

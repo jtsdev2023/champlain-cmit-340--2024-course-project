@@ -14,7 +14,7 @@ void readCSVFile() {
     std::string header_2 = "Serial Number";
     std::string header_3 = "License Number";
 
-    io::CSVReader<3> in("../csv01.csv");
+    io::CSVReader<3> in("csv01.csv");
     in.read_header(io::ignore_extra_column, header_1, header_2, header_3);
     std::string h_1; std::string h_2; std::string h_3;
 

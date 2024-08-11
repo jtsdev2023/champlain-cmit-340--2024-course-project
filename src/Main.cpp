@@ -1,4 +1,4 @@
-// main.cpp
+// Main.cpp
 
 #include "UserCLIMenu.cpp"
 
