@@ -2,16 +2,16 @@
 
 
 
-#include <string>
+// #include <string>
 #include <variant>
-#include <iostream>
+// #include <iostream>
 
 // move this to the device class... good idea ?
-#include "ReadCSVFile.cpp"
+// #include "ReadCSVFile.cpp"
 // #include "../include/ReadCSVFile.h"
 
 
-// #include "../include/Device.h"
+#include "../include/Device.h"
 // #include "../include/TV.h"
 // #include "../include/Thermostat.h"
 // #include "../include/Lights.h"
@@ -163,7 +163,10 @@ void selection1()
     // and call readCSVFile() from the member function displayDeviceInfo()
     // couldn't get it to work
     // giving up on it
-    readCSVFile();
+    Device device;
+    device.displayDeviceInfo("/home/user01/development/champlain/sdev-340/champlain-sdev-340-2024-course-project/data/csv01.csv");
+    // unable to make relative file path work
+    // device.displayDeviceInfo("../../data/csv01.csv");
 
 }
 
