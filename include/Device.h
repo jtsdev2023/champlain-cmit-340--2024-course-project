@@ -7,6 +7,9 @@
 #include <chrono>
 #include <iostream>
 
+// #include "../src/ReadCSVFile.cpp"
+#include "../include/ReadCSVFile.h"
+
 
 class Device {
 public:
@@ -16,7 +19,8 @@ public:
 
     virtual void turnOn();
     virtual void turnOff();
-    // virtual void displayDeviceInfo() const;
+    // virtual void displayDeviceInfo();
+
     auto getCurrentTime();
     // can Device call getCurrentTime()? and make the return value public variable?
 

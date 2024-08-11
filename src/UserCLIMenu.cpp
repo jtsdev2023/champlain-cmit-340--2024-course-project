@@ -8,6 +8,7 @@
 
 // move this to the device class... good idea ?
 #include "ReadCSVFile.cpp"
+// #include "../include/ReadCSVFile.h"
 
 
 // #include "../include/Device.h"
@@ -157,7 +158,13 @@ void selection1()
     std::cout << std::endl;
     std::cout << "Selection 1: Power on and register smart devices";
     std::cout << std::endl << std::endl;
+
+    // tried for hours to instantiate Device class here
+    // and call readCSVFile() from the member function displayDeviceInfo()
+    // couldn't get it to work
+    // giving up on it
     readCSVFile();
+
 }
 
 // selection 2 TV
