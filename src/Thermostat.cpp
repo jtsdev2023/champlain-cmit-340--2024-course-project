@@ -1,11 +1,13 @@
 // Thermostat.cpp
 
 
-#include "Thermostat.h"
+#include "../include/Thermostat.h"
 
 
-Thermostat::Thermostat(const std::string name, const std::string serialNumber, const std::string license, int dayDesiredTemp, int nightDesiredTemp, const int currentTemp)
-    : Device(name, serialNumber, license), dayDesiredTemp(dayDesiredTemp), nightDesiredTemp(nightDesiredTemp), currentTemp(currentTemp) {}
+// Thermostat::Thermostat(const std::string name, const std::string serialNumber, const std::string license, int dayDesiredTemp, int nightDesiredTemp, const int currentTemp)
+//     : Device(name, serialNumber, license), dayDesiredTemp(dayDesiredTemp), nightDesiredTemp(nightDesiredTemp), currentTemp(currentTemp) {}
+Thermostat::Thermostat(int dayDesiredTemp, int nightDesiredTemp, const int currentTemp)
+    : dayDesiredTemp(dayDesiredTemp), nightDesiredTemp(nightDesiredTemp), currentTemp(currentTemp) {}
 
 void Thermostat::setDesiredTemp() {
     // check current time public var from Device

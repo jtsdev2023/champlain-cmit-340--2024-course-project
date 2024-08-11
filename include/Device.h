@@ -9,7 +9,8 @@
 
 class Device {
 public:
-    Device(const std::string name, const std::string serialNumber, const std::string license);
+    // Device(const std::string name, const std::string serialNumber, const std::string license);
+    Device();
     virtual ~Device();
 
     virtual void turnOn();
@@ -19,9 +20,9 @@ public:
     // can Device call getCurrentTime()? and make the return value public variable?
 
 private:
-    std::string name;
-    std::string serialNumber;
-    std::string license;
-    bool isOn;
+    // std::string name;
+    // std::string serialNumber;
+    // std::string license;
+    // bool isOn;
 
 };

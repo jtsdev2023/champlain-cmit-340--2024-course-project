@@ -1,8 +1,9 @@
 // Lights.cpp
 
-#include "Lights.h"
+#include "../include/Lights.h"
 
-Lights::Lights(const std::string name, const std::string serialNumber, const std::string license, const int activateTime, const int deactivateTime, std::string moodLighting) : Device(name, serialNumber, license), activateTime(activateTime), deactivateTime(deactivateTime), moodLighting(moodLighting) {}
+// Lights::Lights(const std::string name, const std::string serialNumber, const std::string license, const int activateTime, const int deactivateTime, std::string moodLighting) : Device(name, serialNumber, license), activateTime(activateTime), deactivateTime(deactivateTime), moodLighting(moodLighting) {}
+Lights::Lights(const int activateTime, const int deactivateTime, std::string moodLighting) : activateTime(activateTime), deactivateTime(deactivateTime), moodLighting(moodLighting) {}
 
 void Lights::turnOn() {
     // check activateTime against current time from Device

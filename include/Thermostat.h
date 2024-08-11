@@ -7,7 +7,8 @@
 class Thermostat : public Device
 {
 public:
-    Thermostat(const std::string name, const std::string serialNumber, const std::string license, int dayDesiredTemp, int nightDesiredTemp, int currentTemp);
+    // Thermostat(const std::string name, const std::string serialNumber, const std::string license, int dayDesiredTemp, int nightDesiredTemp, int currentTemp);
+    Thermostat(int dayDesiredTemp, int nightDesiredTemp, int currentTemp);
     ~Thermostat();
 
     void setDesiredTemp();
