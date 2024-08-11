@@ -1,5 +1,5 @@
-header_1,header_2,header_3
-a,b,c
-alpha,bravo,charlie
-apple,bear,chicken
-angel,bury,cupid
+Device Name,Serial Number,License Number
+smart TV,111111,0x1B207
+lights,222222,0x3640E
+security system,333333,0x51615
+thermostat,444444,0x6C81C
