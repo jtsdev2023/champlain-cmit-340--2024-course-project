@@ -34,6 +34,7 @@ void selection2();
 void selection3();
 void selection4();
 void selection5();
+void selection6();
 void quit();
 
 
@@ -82,6 +83,7 @@ void menuRun()
             selection5();
             break;
         case 6:
+            selection6();
             return;
         default:
             std::cin.clear();
@@ -91,9 +93,8 @@ void menuRun()
             std::cin >> userSelection;
         }
 
-        std::cin.clear();
-        std::cout << std::endl;
-        std::cout << std::endl;
+        // std::cout << std::endl;
+        // std::cout << std::endl;
     }
 
 }
@@ -115,40 +116,48 @@ void displayMenu()
     std::cout << "6. Quit" << std::endl;
     std::cout << std::endl;
     std::cout << "Please Make a Selection: ";
+
 }
 
 // selection 1 power on
 void selection1()
 {
+    std::cout << std::endl;
     std::cout << "Selection 1: Power on and register smart devices" << std::endl;
 }
 
 // selection 2 thermostat
 void selection2()
 {
+    std::cout << std::endl;
     std::cout << "Selection 2: Thermostat" << std::endl;
 }
 
 // selection 3 TV
 void selection3()
 {
+    std::cout << std::endl;
     std::cout << "Selection 3: TV" << std::endl;
 }
 
 // selection 4 lighting
 void selection4()
 {
+    std::cout << std::endl;
     std::cout << "Selection 4: Lighting" << std::endl;
 }
 
 // selection 5 security system
 void selection5()
 {
+    std::cout << std::endl;
     std::cout << "Selection 5: Security system" << std::endl;
 }
 
 // quit
 void selection6()
 {
+    std::cout << std::endl;
     std::cout << "Quitting..." << std::endl;
+    std::cout << std::endl;
 }
