@@ -2,9 +2,12 @@
 // https://github.com/ben-strasser/fast-cpp-csv-parser
 
 
-#include "../include/csv.h"
+
 #include <iomanip>
 #include <iostream>
+
+#include "../include/csv.h"
+
 
 void readCSVFile() {
     std::string header_1 = "Device Name";

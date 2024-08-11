@@ -5,9 +5,15 @@
 #include <variant>
 #include <iostream>
 
-#include "ReadCSVFile.cpp"
+// move this to the device class... good idea ?
+// #include "ReadCSVFile.cpp"
 
+
+#include "../include/Device.h"
 #include "../include/TV.h"
+#include "../include/Thermostat.h"
+#include "../include/Lights.h"
+#include "../include/SecuritySystem.h"
 
 /*
 
@@ -150,7 +156,8 @@ void selection1()
     std::cout << std::endl;
     std::cout << "Selection 1: Power on and register smart devices";
     std::cout << std::endl << std::endl;
-    readCSVFile();
+    // moved to device class
+    // readCSVFile();
 }
 
 // selection 2 TV
