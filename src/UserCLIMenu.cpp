@@ -86,10 +86,18 @@ void menuRun()
         }
 
 
+        // web search indicates that unlike python
+        // if the 'cin' value is not an integer
+        // it doesn't capture the input and is an error
+        // this is why i had problems fixing the infinite loop
+
+        // test if 'cin' doesn't exist
+        // if not clear and ignore
         if (!(std::cin))
         {
             std::cin.clear();
             // std::cin.ignore();
+            // used from stackoverflow
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
             continue;
         }
