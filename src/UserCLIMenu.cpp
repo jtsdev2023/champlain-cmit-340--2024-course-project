@@ -16,7 +16,7 @@
 #include "../include/Thermostat.h"
 #include "../include/TV.h"
 #include "../include/Lights.h"
-// #include "../include/SecuritySystem.h"
+#include "../include/SecuritySystem.h"
 
 /*
 
@@ -180,7 +180,7 @@ void selection1()
     // couldn't get it to work
     // giving up on it
     Device device;
-    device.displayDeviceInfo("/home/user01/development/champlain/sdev-340/champlain-sdev-340-2024-course-project/data/csv01.csv");
+    device.displayDeviceInfo("/home/user01/development/champlain/sdev-340/test2/champlain-sdev-340-2024-course-project/data/csv01.csv");
     // unable to make relative file path work
     // device.displayDeviceInfo("../../data/csv01.csv");
 
@@ -248,6 +248,10 @@ void selection5()
 {
     std::cout << std::endl;
     std::cout << "Selection 5: Security system" << std::endl;
+    std::cout << std::endl << std::endl;
+
+    SecuritySystem mySecuritySystem;
+    mySecuritySystem.securityInit("/home/user01/development/champlain/sdev-340/test2/champlain-sdev-340-2024-course-project/data/securitysystem.csv");
 }
 
 // quit
