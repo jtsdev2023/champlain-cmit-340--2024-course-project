@@ -14,7 +14,7 @@
 
 #include "../include/Device.h"
 #include "../include/Thermostat.h"
-// #include "../include/TV.h"
+#include "../include/TV.h"
 // #include "../include/Lights.h"
 // #include "../include/SecuritySystem.h"
 
@@ -215,6 +215,20 @@ void selection3()
 {
     std::cout << std::endl;
     std::cout << "Selection 3: TV" << std::endl;
+    std::cout << std::endl << std::endl;
+
+    int desiredChannel = 0;
+    int desiredVolume = 0;
+
+    std::cout << "Desired Channel:" << std::endl;
+    std::cin >> desiredChannel;
+    std::cout << "Desired Volume:" << std::endl;
+    std::cin >> desiredVolume;
+
+    TV myTV(desiredChannel, desiredVolume);
+    myTV.setChannel();
+    myTV.setVolume();
+
 }
 
 // selection 4 lighting
