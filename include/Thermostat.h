@@ -9,7 +9,7 @@ class Thermostat : public Device
 public:
     // Thermostat(const std::string name, const std::string serialNumber, const std::string license, int dayDesiredTemp, int nightDesiredTemp, int currentTemp);
     Thermostat(int dayDesiredTemp, int nightDesiredTemp, int currentTemp);
-    ~Thermostat();
+    virtual ~Thermostat();
 
     void setDesiredTemp();
     // need logic to get current time
@@ -28,7 +28,6 @@ public:
     virtual void displayCurrentTemp() const;
     virtual void displayDesiredTemp() const;
 
-private:
     int dayDesiredTemp;
     int nightDesiredTemp;
     int currentTemp;

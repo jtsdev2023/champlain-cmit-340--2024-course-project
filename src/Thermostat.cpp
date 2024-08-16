@@ -9,6 +9,8 @@
 Thermostat::Thermostat(int dayDesiredTemp, int nightDesiredTemp, const int currentTemp)
     : dayDesiredTemp(dayDesiredTemp), nightDesiredTemp(nightDesiredTemp), currentTemp(currentTemp) {}
 
+Thermostat::~Thermostat() {}
+
 void Thermostat::setDesiredTemp() {
     // check current time public var from Device
     // if between 6am and 5pm, use dayDesiredTemp

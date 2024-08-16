@@ -13,8 +13,8 @@
 
 
 #include "../include/Device.h"
+#include "../include/Thermostat.h"
 // #include "../include/TV.h"
-// #include "../include/Thermostat.h"
 // #include "../include/Lights.h"
 // #include "../include/SecuritySystem.h"
 
@@ -186,18 +186,35 @@ void selection1()
 
 }
 
-// selection 2 TV
+// selection 2 thermostat
 void selection2()
 {
     std::cout << std::endl;
-    std::cout << "Selection 2: TV" << std::endl;
+    std::cout << "Selection 2: Thermostat" << std::endl;
+    std::cout << std::endl << std::endl;
+
+    int daytimeTemp = 0;
+    int nighttimeTemp = 0;
+    int currentTemp = 0;
+
+    std::cout << "Desired Daytime Temperature:" << std::endl;
+    std::cin >> daytimeTemp;
+    std::cout << "Desired Nighttime Temperature:" << std::endl;
+    std::cin >> nighttimeTemp;
+    std::cout << "Current Temperature:" << std::endl;
+    std::cin >> currentTemp;
+
+    Thermostat myThermostat(daytimeTemp, nighttimeTemp, currentTemp);
+    myThermostat.displayCurrentTemp();
+    myThermostat.displayDesiredTemp();
+
 }
 
-// selection 3 thermostat
+// selection 3 TV
 void selection3()
 {
     std::cout << std::endl;
-    std::cout << "Selection 3: Thermostat" << std::endl;
+    std::cout << "Selection 3: TV" << std::endl;
 }
 
 // selection 4 lighting
