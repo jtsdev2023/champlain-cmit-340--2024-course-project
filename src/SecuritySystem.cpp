@@ -19,7 +19,7 @@ int SecuritySystem::getSecurityCode() {
     return userPassCode;
 };
 
-int SecuritySystem::securityInit(const std::string& inputFileName)
+void SecuritySystem::securityInit(const std::string& inputFileName)
 {
     // get pass code
     // int code = getSecurityCode();
@@ -45,13 +45,13 @@ int SecuritySystem::securityInit(const std::string& inputFileName)
         std::cout << std::endl;
     }
 
-    return std::stoi(h_4);
+    systemArmDisarm(std::stoi(h_4));
 
 }
 
-void SecuritySystem::arm(int armCode) {
+void SecuritySystem::arm(int code, int armCode) {
     // arm security system
-    int code = getSecurityCode();
+    // int code = getSecurityCode();
     // if (code == std::stoi(h_4))
     if (code == armCode)
     {
@@ -65,9 +65,9 @@ void SecuritySystem::arm(int armCode) {
     
 };
 
-void SecuritySystem::disarm(int disarmCode) {
+void SecuritySystem::disarm(int code, int disarmCode) {
     // arm security system
-    int code = getSecurityCode();
+    // int code = getSecurityCode();
     if (code == disarmCode)
     {
         std::cout << "Security System Disarmed" << std::endl;
@@ -78,6 +78,30 @@ void SecuritySystem::disarm(int disarmCode) {
         std::cout << "Invalid Pass Code" << std::endl;
     }
     
+};
+
+void SecuritySystem::systemArmDisarm(int inputCode) {
+    // arm or disarm security system
+    std::string userInput;
+    std::cout << "Enter \"arm\" to arm the security system or \"disarm\" to disarm the security system: ";
+    std::cin >> userInput;
+
+    int code = getSecurityCode();
+
+    if (userInput == "arm")
+    {
+        arm(code, inputCode);
+    }
+
+    else if (userInput == "disarm")
+    {
+        disarm(code, inputCode);
+    }
+
+    else
+    {
+        std::cout << "Invalid Selection" << std::endl;
+    }
 };
 
 void SecuritySystem::setSecurityCode() {

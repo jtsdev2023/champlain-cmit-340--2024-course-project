@@ -149,8 +149,10 @@ void displayMenu()
     std::cout << "2. Selection 2: Thermostat" << std::endl;
     std::cout << "3. Selection 3: TV" << std::endl;
     std::cout << "4. Selection 4: Lighting" << std::endl;
-    std::cout << "5. Selection 5: Security system" << std::endl;
-    std::cout << "6. Quit" << std::endl;
+    std::cout << "5. Selection 5: Initialize security system" << std::endl;
+    std::cout << "6. Selection 6: Arm security system" << std::endl;
+    std::cout << "7. Selection 7: Disarm security system" << std::endl;
+    std::cout << "8. Quit" << std::endl;
     std::cout << std::endl;
     std::cout << "Please Make a Selection: ";
 
@@ -251,10 +253,10 @@ void selection5()
     std::cout << std::endl << std::endl;
 
     SecuritySystem mySecuritySystem;
-    int codeFromFile = mySecuritySystem.securityInit("/home/user01/development/champlain/sdev-340/test2/champlain-sdev-340-2024-course-project/data/securitysystem.csv");
+    mySecuritySystem.securityInit("/home/user01/development/champlain/sdev-340/test2/champlain-sdev-340-2024-course-project/data/securitysystem.csv");
 
-    mySecuritySystem.arm(codeFromFile);
-    mySecuritySystem.disarm(codeFromFile);
+    // mySecuritySystem.arm(codeFromFile);
+    // mySecuritySystem.disarm(codeFromFile);
 }
 
 // quit
