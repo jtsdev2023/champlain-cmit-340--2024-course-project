@@ -15,7 +15,7 @@
 #include "../include/Device.h"
 #include "../include/Thermostat.h"
 #include "../include/TV.h"
-// #include "../include/Lights.h"
+#include "../include/Lights.h"
 // #include "../include/SecuritySystem.h"
 
 /*
@@ -236,6 +236,11 @@ void selection4()
 {
     std::cout << std::endl;
     std::cout << "Selection 4: Lighting" << std::endl;
+    std::cout << std::endl << std::endl;
+
+    Lights myLights;
+    myLights.turnOn();
+    myLights.displayStatus();
 }
 
 // selection 5 security system

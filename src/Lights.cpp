@@ -3,7 +3,9 @@
 #include "../include/Lights.h"
 
 // Lights::Lights(const std::string name, const std::string serialNumber, const std::string license, const int activateTime, const int deactivateTime, std::string moodLighting) : Device(name, serialNumber, license), activateTime(activateTime), deactivateTime(deactivateTime), moodLighting(moodLighting) {}
-Lights::Lights(const int activateTime, const int deactivateTime, std::string moodLighting) : activateTime(activateTime), deactivateTime(deactivateTime), moodLighting(moodLighting) {}
+Lights::Lights() {}
+
+Lights::~Lights() {}
 
 void Lights::turnOn() {
     // check activateTime against current time from Device
@@ -14,4 +16,19 @@ void Lights::turnOn() {
     // do i need "activate" and "deactivate" times ?
     // maybe just activate time and work from that ?
     // what about a duration value instead of deactivateTime?
+    
+    std::cout << "Turn lights on? (yes/no): " << std::endl;
+    std::cin >> lightsOn;
+};
+
+void Lights::displayStatus()
+{
+    if (lightsOn == "yes")
+    {
+        std::cout << "Lights are on" << std::endl;
+    }
+    else
+    {
+        std::cout << "Lights are off" << std::endl;
+    }
 };
