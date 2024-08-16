@@ -150,9 +150,7 @@ void displayMenu()
     std::cout << "3. Selection 3: TV" << std::endl;
     std::cout << "4. Selection 4: Lighting" << std::endl;
     std::cout << "5. Selection 5: Initialize security system" << std::endl;
-    std::cout << "6. Selection 6: Arm security system" << std::endl;
-    std::cout << "7. Selection 7: Disarm security system" << std::endl;
-    std::cout << "8. Quit" << std::endl;
+    std::cout << "6. Quit" << std::endl;
     std::cout << std::endl;
     std::cout << "Please Make a Selection: ";
 

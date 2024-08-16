@@ -1,4 +1,15 @@
-// SecuritySystem.h
+/*
+ * Filename: SecuritySystem.h
+ * Description: thermostat class header file.
+ * Author: Jeremy Sizemore
+ * Date: August 16, 2024
+ * Version: 1.0
+ * Copyright: (c) 2024 Jeremy Sizemore
+ * Dependencies: Device.h
+ * Change Log:
+ *    - v1.0: Initial version
+ */
+
 
 #pragma once
 

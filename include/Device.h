@@ -1,4 +1,15 @@
-// Device.h
+/*
+ * Filename: Device.h
+ * Description: device class header file.
+ * Author: Jeremy Sizemore
+ * Date: August 16, 2024
+ * Version: 1.0
+ * Copyright: (c) 2024 Jeremy Sizemore
+ * Dependencies: include/csv.h from CSV libary https://github.com/ben-strasser/fast-cpp-csv-parser
+ * Change Log:
+ *    - v1.0: Initial version
+ */
+
 
 #pragma once
 
