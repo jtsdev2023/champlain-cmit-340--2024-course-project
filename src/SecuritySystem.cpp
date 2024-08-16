@@ -8,8 +8,22 @@ SecuritySystem::SecuritySystem() {}
 
 SecuritySystem::~SecuritySystem() {}
 
+int SecuritySystem::getSecurityCode() {
+    // get security code
+    // input i/o
+    // output i/o would be to read security code from file
+    int userPassCode = 0;
+    std::cout << "Enter Your Pass Code: ";
+    std::cin >> userPassCode;
+
+    return userPassCode;
+};
+
 void SecuritySystem::securityInit(const std::string& inputFileName)
 {
+    // get pass code
+    int code = getSecurityCode();
+
     std::string header_1 = "Device Name";
     std::string header_2 = "Serial Number";
     std::string header_3 = "License";
@@ -31,7 +45,19 @@ void SecuritySystem::securityInit(const std::string& inputFileName)
         std::cout << std::endl;
     }
 
+    if (code == std::stoi(h_4))
+    {
+        std::cout << "Access Granted" << std::endl;
+    }
+
+    else
+    {
+        std::cout << "Access Denied" << std::endl;
+    }
+
 }
+
+
 
 void SecuritySystem::setSecurityCode() {
     // set security code
