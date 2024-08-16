@@ -19,10 +19,10 @@ int SecuritySystem::getSecurityCode() {
     return userPassCode;
 };
 
-void SecuritySystem::securityInit(const std::string& inputFileName)
+int SecuritySystem::securityInit(const std::string& inputFileName)
 {
     // get pass code
-    int code = getSecurityCode();
+    // int code = getSecurityCode();
 
     std::string header_1 = "Device Name";
     std::string header_2 = "Serial Number";
@@ -45,19 +45,40 @@ void SecuritySystem::securityInit(const std::string& inputFileName)
         std::cout << std::endl;
     }
 
-    if (code == std::stoi(h_4))
+    return std::stoi(h_4);
+
+}
+
+void SecuritySystem::arm(int armCode) {
+    // arm security system
+    int code = getSecurityCode();
+    // if (code == std::stoi(h_4))
+    if (code == armCode)
     {
-        std::cout << "Access Granted" << std::endl;
+        std::cout << "Security System Armed" << std::endl;
     }
 
     else
     {
-        std::cout << "Access Denied" << std::endl;
+        std::cout << "Invalid Pass Code" << std::endl;
+    }
+    
+};
+
+void SecuritySystem::disarm(int disarmCode) {
+    // arm security system
+    int code = getSecurityCode();
+    if (code == disarmCode)
+    {
+        std::cout << "Security System Disarmed" << std::endl;
     }
 
-}
-
-
+    else
+    {
+        std::cout << "Invalid Pass Code" << std::endl;
+    }
+    
+};
 
 void SecuritySystem::setSecurityCode() {
     // set security code

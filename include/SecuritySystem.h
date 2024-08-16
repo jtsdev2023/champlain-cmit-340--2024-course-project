@@ -18,14 +18,15 @@ public:
 
     // i/o read security code from file
     // i/o write security code to file
-    void securityInit(const std::string& inputFileName);
+    int securityInit(const std::string& inputFileName);
     int getSecurityCode();
     void setSecurityCode();
-    // void arm();
+    void arm(int armCode);
+    void disarm(int disarmCode);
     // void disarm();
 
     // call displayStatus() from arm() and disarm()?
-    void displayStatus();
+    // void displayStatus();
 
     int securityCode;
     int userPassCode;

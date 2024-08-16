@@ -251,7 +251,10 @@ void selection5()
     std::cout << std::endl << std::endl;
 
     SecuritySystem mySecuritySystem;
-    mySecuritySystem.securityInit("/home/user01/development/champlain/sdev-340/test2/champlain-sdev-340-2024-course-project/data/securitysystem.csv");
+    int codeFromFile = mySecuritySystem.securityInit("/home/user01/development/champlain/sdev-340/test2/champlain-sdev-340-2024-course-project/data/securitysystem.csv");
+
+    mySecuritySystem.arm(codeFromFile);
+    mySecuritySystem.disarm(codeFromFile);
 }
 
 // quit
