@@ -66,7 +66,7 @@ void menuRun()
     // this was super hard... so much easier in python
     // couldn't get it to work so just going with type int
     int userSelection = 0;
-    int loopCounter = 0;
+    int loopCounter = 1;
 
     while (true)
     {
@@ -76,11 +76,8 @@ void menuRun()
 
         loopCounter++;
 
-        // i have a bug
-        // if userSelection is not an int, it goes into an infinite loop
-        // haven't been able to fix it yet
-        // i think the problem is with "default"
-        // i've tried adding logic to "default" that would fix it but not working
+        // fixed infinite loop bug
+        // did a test if not 'cin' then clear, ignore, and continue
 
         if (loopCounter > 10)
         {
@@ -92,6 +89,7 @@ void menuRun()
         if (!(std::cin))
         {
             std::cin.clear();
+            // std::cin.ignore();
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
             continue;
         }
