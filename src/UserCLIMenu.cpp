@@ -4,7 +4,8 @@
 
 // #include <string>
 #include <variant>
-// #include <iostream>
+#include <iostream>
+#include <limits>
 
 // move this to the device class... good idea ?
 // #include "ReadCSVFile.cpp"
@@ -80,11 +81,21 @@ void menuRun()
         // haven't been able to fix it yet
         // i think the problem is with "default"
         // i've tried adding logic to "default" that would fix it but not working
+
         if (loopCounter > 10)
         {
             std::cout << "Loop Counter Exceeded... Exiting..." << std::endl;
             return;
         }
+
+
+        if (!(std::cin))
+        {
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            continue;
+        }
+
 
         switch (userSelection)
         {
@@ -117,7 +128,6 @@ void menuRun()
         // std::cout << std::endl;
         // std::cout << std::endl;
     }
-
 }
 
 
