@@ -1,0 +1,23 @@
+- It has been an extremely busy month at work, and I didn't get to 
+  implement much of what I had intended, which resulted in this not being my best work.
+  It was fun, however, and I wish I had taken this as a 16 week course instead of 8.
+  I'm not sure that I will pursue C++ much farther 1) because I really don't have a work use case
+  and 2) I think I might pursue learning Rust rather than putting more time into C/C++.
+  Lastly, this course made me realize how much I take for granted when using Python. ☺️
+- Compiled using g++ on Linux Ubuntu 24.04 LTS.
+- Used the following C++ CSV library, but the required "csv.h" header file is in the "~/include"
+  directory, and I don't think you have to load it again.
+  https://github.com/ben-strasser/fast-cpp-csv-parser
+- Compile command:
+    g++ -o bin/run.exe src/Main.cpp src/Device.cpp src/Thermostat.cpp src/TV.cpp src/Lights.cpp src/SecuritySystem.cpp  -lpthread
+- Program uses a CLI menu interface.
+  I attempted to make the menu intuitive.
+- Selection 1 powers on the system and registers the smart devices from CSV file ~/data/csv01.csv.
+- Selection 2 operates the thermostat.
+- Selection 3 operates the TV.
+- Selection 4 operates the Lighting.
+- Selection 5 initializes the security system and asks if you want to arm or disarm the system.
+    - The security system code is "123456".
+- Selection 6 exits the system.
+- I did some user input verification for the menu, but I didn't have time to implement it
+  everywhere user input is asked for.

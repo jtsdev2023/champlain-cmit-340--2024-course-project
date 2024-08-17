@@ -71,68 +71,75 @@ void menuRun()
     while (true)
     {
         
-        displayMenu();
-        std::cin >> userSelection;
-
-        loopCounter++;
-
-        // fixed infinite loop bug
-        // did a test if not 'cin' then clear, ignore, and continue
-
-        if (loopCounter > 10)
+        try
         {
-            std::cout << "Loop Counter Exceeded... Exiting..." << std::endl;
-            return;
-        }
-
-
-        // web search indicates that unlike python
-        // if the 'cin' value is not an integer
-        // it doesn't capture the input and is an error
-        // this is why i had problems fixing the infinite loop
-
-        // test if 'cin' doesn't exist
-        // if not clear and ignore
-        if (!(std::cin))
-        {
-            std::cin.clear();
-            // std::cin.ignore();
-            // used from stackoverflow
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-            continue;
-        }
-
-
-        switch (userSelection)
-        {
-        case 1:
-            selection1();
-            break;
-        case 2:
-            selection2();
-            break;
-        case 3:
-            selection3();
-            break;
-        case 4:
-            selection4();
-            break;
-        case 5:
-            selection5();
-            break;
-        case 6:
-            selection6();
-            return;
-        default:
-            std::cin.clear();
-            std::cout << std::endl;
-            std::cout << std::endl;
-            std::cout << "Invalid Selection... Please Make a Different Selection or Enter Option \"6\" to Exit the Menu." << std::endl;
+            displayMenu();
             std::cin >> userSelection;
-        }
 
-        // std::cout << std::endl;
-        // std::cout << std::endl;
+            loopCounter++;
+
+            // fixed infinite loop bug
+            // did a test if not 'cin' then clear, ignore, and continue
+
+            if (loopCounter > 10)
+            {
+                std::cout << "Loop Counter Exceeded... Exiting..." << std::endl;
+                return;
+            }
+
+
+            // web search indicates that unlike python
+            // if the 'cin' value is not an integer
+            // it doesn't capture the input and is an error
+            // this is why i had problems fixing the infinite loop
+
+            // test if 'cin' doesn't exist
+            // if not clear and ignore
+            if (!(std::cin))
+            {
+                std::cin.clear();
+                // std::cin.ignore();
+                // used from stackoverflow
+                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                continue;
+            }
+
+
+            switch (userSelection)
+            {
+            case 1:
+                selection1();
+                break;
+            case 2:
+                selection2();
+                break;
+            case 3:
+                selection3();
+                break;
+            case 4:
+                selection4();
+                break;
+            case 5:
+                selection5();
+                break;
+            case 6:
+                selection6();
+                return;
+            default:
+                std::cin.clear();
+                std::cout << std::endl;
+                std::cout << std::endl;
+                std::cout << "Invalid Selection... Please Make a Different Selection or Enter Option \"6\" to Exit the Menu." << std::endl;
+                std::cin >> userSelection;
+            }
+
+            // std::cout << std::endl;
+            // std::cout << std::endl;
+        }
+        catch (const std::exception& e)
+        {
+            std::cerr << e.what() << '\n';
+        }
     }
 }
 
@@ -145,12 +152,12 @@ void displayMenu()
     std::cout << "=          Main Menu          =" << std::endl;
     std::cout << "===============================" << std::endl;
     std::cout << std::endl;
-    std::cout << "1. Selection 1: Power on and register smart devices" << std::endl;
-    std::cout << "2. Selection 2: Thermostat" << std::endl;
-    std::cout << "3. Selection 3: TV" << std::endl;
-    std::cout << "4. Selection 4: Lighting" << std::endl;
-    std::cout << "5. Selection 5: Initialize security system" << std::endl;
-    std::cout << "6. Quit" << std::endl;
+    std::cout << "1) Power on and register smart devices" << std::endl;
+    std::cout << "2) Thermostat" << std::endl;
+    std::cout << "3) TV" << std::endl;
+    std::cout << "4) Lighting" << std::endl;
+    std::cout << "5) Initialize security system" << std::endl;
+    std::cout << "6) Quit" << std::endl;
     std::cout << std::endl;
     std::cout << "Please Make a Selection: ";
 
