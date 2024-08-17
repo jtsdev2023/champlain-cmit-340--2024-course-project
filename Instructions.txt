@@ -4,12 +4,14 @@
   I'm not sure that I will pursue C++ much farther 1) because I really don't have a work use case
   and 2) I think I might pursue learning Rust rather than putting more time into C/C++.
   Lastly, this course made me realize how much I take for granted when using Python. ☺️
+
 - Compiled using g++ on Linux Ubuntu 24.04 LTS.
 - Used the following C++ CSV library, but the required "csv.h" header file is in the "~/include"
   directory, and I don't think you have to load it again.
   https://github.com/ben-strasser/fast-cpp-csv-parser
 - Compile command:
     g++ -o bin/run.exe src/Main.cpp src/Device.cpp src/Thermostat.cpp src/TV.cpp src/Lights.cpp src/SecuritySystem.cpp  -lpthread
+- Execute the program with "./bin/run.exe".
 - Program uses a CLI menu interface.
   I attempted to make the menu intuitive.
 - Selection 1 powers on the system and registers the smart devices from CSV file ~/data/csv01.csv.
@@ -21,3 +23,15 @@
 - Selection 6 exits the system.
 - I did some user input verification for the menu, but I didn't have time to implement it
   everywhere user input is asked for.
+
+*******************
+**   FIXED BUG   **
+*******************
+  * I was having a problem getting the relative file path to work with the "fast-cpp-csv-parser".
+    I believe I have fixed it.
+  * The fix works on my development VM.
+  * If the relative path fix does not work, instructor may need to modify the file path in the code.
+    1) UserCLIMenu.cpp
+       Approx. line 190, "device.displayDeviceInfo();" will need to be updated with new file path.
+    2) UserCLIMenu.cpp
+       Approx. line 261, "mySecuritySystem.securityInit();" will need to be updated with new file path.

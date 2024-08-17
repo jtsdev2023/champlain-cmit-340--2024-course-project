@@ -187,7 +187,7 @@ void selection1()
     // couldn't get it to work
     // giving up on it
     Device device;
-    device.displayDeviceInfo("/home/user01/development/champlain/sdev-340/test2/champlain-sdev-340-2024-course-project/data/csv01.csv");
+    device.displayDeviceInfo("data/csv01.csv");
     // unable to make relative file path work
     // device.displayDeviceInfo("../../data/csv01.csv");
 
@@ -258,7 +258,7 @@ void selection5()
     std::cout << std::endl << std::endl;
 
     SecuritySystem mySecuritySystem;
-    mySecuritySystem.securityInit("/home/user01/development/champlain/sdev-340/test2/champlain-sdev-340-2024-course-project/data/securitysystem.csv");
+    mySecuritySystem.securityInit("data/securitysystem.csv");
 
     // mySecuritySystem.arm(codeFromFile);
     // mySecuritySystem.disarm(codeFromFile);
